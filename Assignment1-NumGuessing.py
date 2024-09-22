@@ -1,22 +1,22 @@
 import random
-secret_number= random.randint(1, 50)
+secret_number= random.randint(1, 100)
 
 #assigning the total attempts=5
 attempts = 5
 
-print("Guess the secret number between 1 and 50. You have 5 attempts!")
+print("Guess the secret number between 1 and 100. You have 5 attempts!")
 
 while attempts > 0: 
         user_guess = int(input("Enter your guess: "))
         
         if user_guess < 1 or user_guess > 50:
-            print("Please enter a number between 1 and 50.")
+            print("Please enter a number between 1 and 100.")
             continue
         
         if user_guess < secret_number:
-            print("Your input is very low. Try again.")
+            print("Your input is too low. Try again.")
         elif user_guess > secret_number:
-            print("Your input is very high. Try again.")
+            print("Your input is too high. Try again.")
         else:
             print("Congratulations! You won!")
             break
